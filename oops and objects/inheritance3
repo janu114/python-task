@@ -1,0 +1,47 @@
+class bankaccount:
+    def __init__(self, account_number, holder_name):
+        self.account_number = account_number
+        self.holder_name = holder_name
+
+    def display_bankaccount(self):
+        print("account_number:", self.account_number)
+        print("holder_name:", self.holder_name)
+        
+        
+class savings_account(bankaccount):
+    def __init__(self, account_number, holder_name, balance):
+        super().__init__(account_number, holder_name)
+        self.balance = balance
+        
+    def display_savings_account(self):
+        self.display_account()
+        print("Balance:", self.balance)
+
+
+class onlinebanking(savings_account):
+    def __init__(self, account_number, holder_name, balance, username, password):
+        super().__init__(account_number, holder_name, balance)
+        self.username= username
+        self.password = password
+
+    def display_online_banking(self):
+        self.display_saving_account()
+        print("username:", self.username)
+        print("password:", self.password)
+
+
+account_number = input("Enter account_number: ")
+holder_name = int(input("holder_name: "))
+balance = input("Enter balance: ")
+username = input("Enter  username: ")
+password = input("enter password:")
+
+s = onlinebanking(account_number, holder_name, balance, username, password)
+
+print("\nOnline Banking Details")
+s.display_online_banking()
+check_balance = input("do you want to check balance?(yes/no):")
+if check_balance=="yes":
+    print("current balance:",)
+
+         

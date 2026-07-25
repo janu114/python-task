@@ -1,0 +1,34 @@
+class vehicle:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def display_vehicle(self):
+        print("Brand:", self.brand)
+        print("Model:", self.model)
+
+
+class car(vehicle):
+    def __init__(self, brand, model, fuel_type, seating_capacity):
+        super().__init__(brand, model)
+        self.fuel_type = fuel_type
+        self.seating_capacity = seating_capacity
+
+    def display_car(self):
+        print("Fuel type:", self.fuel_type)
+        print("seating_capacity:", self.seating_capacity)
+
+
+brand = input("Enter brand: ")
+model = int(input("Enter model: "))
+fuel_type = input("Enter fuel_type: ")
+seating_capacity = input("Enter  seting_capacity: ")
+
+s = car(brand, model, fuel_type, seating_capacity)
+
+print("\nvehicle details")
+s.display_vehicle()
+
+print("\ncar Details")
+s.display_car()
+         

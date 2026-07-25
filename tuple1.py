@@ -1,0 +1,5 @@
+a = ('apple','banana','cherry','orange','kiwi','apple','apple')
+b = a.count('apple')
+print(b)
+print(a[2:6])
+print(a[-1:-8:-1])

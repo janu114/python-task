@@ -1,0 +1,9 @@
+class animal:
+    def eat(self):
+        print("the animal is eating")
+class cat(animal):
+    def sleep(self):
+        print("the cat is sleeping")
+obj = cat()
+obj.eat()
+obj.sleep()
